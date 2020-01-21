@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <h2>Conversor de temperatura</h2>
+        <p>Escribe un numero con decimales y pulsa el boton correspondiente para convertirlo a grados Celsius o Fahrenheit</p>
+        <input type="text" step="2" id="valor"><br><br>
+        <button onclick="aCelsius();">Celsius</button>
+        <button onclick="aFahrenheit();">Fahrenheit</button>
+        <p id="resultado"></p>
+    </body>
+    <script>
+    function aFahrenheit(){
+        var value = document.getElementById('valor').value;
+        document.getElementById('resultado').innerHTML = "el resultado es " + (value*9/5)+32 + "&deg; Fahrenheit";
+    }
+    function aCelsius(){
+        var value = document.getElementById('valor').value;
+        document.getElementById('resultado').innerHTML = "el resultado es " + (value-32)*5/9 + "&deg; Celsius";;
+    }
+    </script>
+</html>
